@@ -26,7 +26,10 @@ function LoginForm() {
             required: true,
             message: 'Please input your Email!'
           },
-          { type: 'email' },
+          {
+            pattern:  /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,4})+$/,
+            message: 'Your Email is invalid!'
+          },
         ]}
         hasFeedback
       >
